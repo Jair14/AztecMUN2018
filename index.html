@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AZTECMUN</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/init.js"></script>
+</head>
+<body>
+  <section class="content">
+    <div class="header">
+      <div class="parallax-container">
+        <div class="section no-pad-bot">
+          <div class="container">
+            <div class="row left-align section scrollspy" id="welcome">
+              <img class="responsive-img hide-on-med-and-down" src="images/logo.png" alt="Logo aztecmum" width="200" height="200" />
+              <img class="responsive-img hide-on-large-only" src="images/logo.png" alt="Logo aztecmum" width="100" height="100" />
+            </div>
+            <br><br>
+          </div>
+        </div>
+        <div class="parallax"><img src="images/fondo.jpg" class="responsive-img"></div>
+      </div>
+      <nav class="nav-extended #2e7d32 green darken-2">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo hide-on-large-only">AZTECMUN</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <div class="row show-on-large-only hide-on-med-and-down">
+               <ul>
+               <div class="col s2"><li><a class="white-text" href="#welcome">Bienvenida</a></li></div>
+               <div class="col s2"><li><a class="white-text" href="#about">Sobre nosotros</a></li></div>
+               <div class="col s2"><li><a class="white-text" href="#comits">Comités</a></li></div>
+               <div class="col s2"><li><a class="white-text" href="#documents">Comité Organizador</a></li></div>
+               <div class="col s2"><li><a class="white-text" href="#know">Documentos</a></li></div>
+               <div class="col s1"><li><a class="white-text" href="registro.html">Registrate</a></li></div>
+               <div class="col s1"><li><a class="dropdown-button tooltipped" data-position="top" data-delay="50" data-tooltip="Contáctanos" href="#!"><i class="material-icons right">assignment</i></a></li></div>
+             </ul>
+               </div>
+      <ul class="side-nav" id="mobile-demo">
+          <li><a href="#!">Bienvenida</a></li>
+          <li><a href="#!">Sobre nosotros</a></li>
+          <li><a href="#!">Comité organizador</a></li>
+          <li><a href="#!">Documentos</a></li>
+          <li><a href="#!">Contáctanos</a></li>
+          <li class="divider"></li>
+          <li><a href="#!">Registrate</a></li>
+      </ul>
+    </div>
+  </nav>
+    </div>
+    <div class="contenido">
+        <div class="contenedor container">
+          <div class="row">
+            <div class="col s12 m6"><br>
+              <div class="carousel carousel-slider " data-indicators = "true">
+                    <a class="carousel-item"><img src="CDE/CDE.png" style="max-width:100%;height: 100%; width:100%;"></a>
+                    <a class="carousel-item"><img src="NATO/nato.png" style="max-width:100%;height: 100%;"></a>
+                    <a class="carousel-item"><img src="CIJ/cij.png" style="max-width:100%;height: 100%;"></a>
+                    <a class="carousel-item"><img src="UNEP/unep.png" style="max-width:100%;height: 100%;"></a>
+              </div>
+            </div>
+            <div class="col s12 m6">
+              <div class="card z-depth-5">
+             <div class="card-image waves-effect waves-block waves-light">
+               <img src="images/filosofia.jpg" alt="Filosofia" class="imagen" style="max-width: 100%;height: 320px;"/>
+             </div>
+             <div class="card-content">
+                <p>FRASE DEL MODELO</p>
+               <span class="card-title activator blue-text ">Ver más<i class="material-icons right">more_vert</i></span>
+             </div>
+             <div class="card-reveal">
+               <span class="card-title grey-text text-darken-4">Filosofia de AztecMUN<i class="material-icons right">close</i></span>
+               <p><b>AZTECMUN</b> es un Modelo de Naciones Unidas, que busca fomentar y desarrollar habilidades
+                    académicas para ayudar al fortalecimiento profesional y personal de los participantes, siendo así el
+                    comienzo para lograr el bien común en la sociedad a través de la concientización de los problemas
+                    nacionales y globales.</p><p>En AZTECMUN creemos solemnemente que, como un Modelo de Naciones Unidas, deben existir
+          cinco pilares fundamentales que ayuden a lograr una armonía dentro del evento y sean las bases
+          para desarrollar un futuro mejor, estos son:</p><p>1. <b>Igualdad</b></p><p>2. <b>Tolerancia</b></p><p>3. <b>Justicia</b></p><p>4. <b>Respeto</b></p><p>5. <b>Uso del dialogo como herramienta para solucionar conflictos</b></p><p>AZTECMUN este año busca reinventarse, renacer y crecer para que un futuro seamos semilleros
+          de nuevos líderes que puedan afrontar las diversas problemáticas de nuestros tiempos y del
+          futuro.</p>
+             </div>
+           </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+</body>
+<script>
+    $(document).ready(function(){
+       $('.carousel.carousel-slider').carousel({fullWidth: true});
+       $(".button-collapse").sideNav();
+    });
+</script>
+</html>
