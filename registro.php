@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,7 @@
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <script type="text/javascript" src="js/init.js"></script>
+  <script type="text/javascript" src="js/ajax.js"></script>
 </head>
 <body>
   <section class="content">
@@ -58,7 +59,10 @@
         <div class="contenedor container">
           <div class="row">
             <div class="col s12">
-              <div class="card z-depth-5">
+              <div class="respuesta center">
+                <p id="respuesta" class="flow-text"></p>
+              </div>
+              <div class="card z-depth-5" id="formulario">
                 <div class="card-content">
                   <span class="card-title center">¡Registrate!</span>
                   <ul class="tabs">
@@ -67,26 +71,71 @@
                     <li class="tab col s3"><a href="#test4">Datos de contacto</a></li>
                   </ul>
                 </div>
-                <div id="test1">
-                  <div class="container">
-                    <div class="input-field">
-                      <input type="text" name="nombre" id="nombre">
-                      <label for="nombre">Nombre completo</label>
-                    </div>
-                    <div class="input-field">
-                      <input type="number" name="matricula" id="matricula">
-                      <label for="matricula">Matricula</label>
-                    </div>
-                    <div class="input-field">
-                      <input type="number" name="grupo" id="grupo">
-                      <label for="grupo">Grupo</label>
+
+                <form method="post" onsubmit="return insertar();">
+                  <div id="test1">
+                    <div class="container">
+                      <div class="input-field">
+                        <input type="text" name="nombre" id="nombre" required>
+                        <label for="nombre">Nombre completo</label>
+                      </div>
+                      <div class="input-field">
+                        <input type="number" name="matricula" id="matricula">
+                        <label for="matricula">Matricula</label>
+                      </div>
+                      <div class="input-field">
+                        <select name="sel2" id="sel2" required>
+                          <option value="" disabled selected>Selecciona tú grupo</option>
+                        </select>
+                        <label>Grupos</label>
+                      </div>
+                      <br>
                     </div>
                   </div>
-                </div>
-                <div id="test2">
-
-                </div>
-                <div id="test4">Datos de contacto</div>
+                  <div id="test2">
+                    <div class="container">
+                      <div class="input-field">
+                        <select name="comite" id="comite" required>
+                          <option value="" disabled selected>Selecciona un comité</option>
+                          <option value="OTAN">OTAN</option>
+                          <option value="CIJ">CIJ</option>
+                          <option value="CDE">CDE</option>
+                        </select>
+                        <label>Comités</label>
+                      </div>
+                      <div class="input-field">
+                        <select name="sel1" id="sel1" required>
+                          <option value="" disabled selected>Selecciona un país</option>
+                        </select>
+                        <label>Paises</label>
+                      </div>
+                      <br>
+                    </div>
+                    <br>
+                  </div>
+                  <div id="test4">
+                    <div class="container">
+                      <div class="input-field">
+                        <input type="email" name="mail" id="mail" required>
+                        <label for="mail">Ingrese su correo electrónico</label>
+                      </div>
+                      <div class="input-field">
+                        <input type="number" name="numero" id="numero" required>
+                        <label for="numero">Ingrese un número de contacto</label>
+                      </div>
+                      <div class="center">
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Regitrarse
+                          <i class="material-icons right">send</i>
+                        </button>
+                      </div>
+                      <br>
+                      <div class="center">
+                        <b><p id="respond" class="center flow-text"></p></b>
+                      </div>
+                      <br>
+                    </div>
+                  </div>
+                </form>
                 </div>
               </div>
         </div>
@@ -94,11 +143,24 @@
     </div>
   </section>
 </body>
+<script type="text/javascript">
+Paises = ["México", "Canadá", "Japón", "Australia", "China", "Estados Unidos", "Perú", "España", "Alemania"];
+var s = document.getElementById('sel1');
+  for (var i = 0; i < Paises.length ; i++) {
+    s.options[i+1] = new Option(Paises[i], i);
+  }
+  Grupos = [611, 612, 613, 411, 412, 413, 211, 212, 213];
+  var s2 = document.getElementById('sel2');
+    for (var i = 0; i < Paises.length ; i++) {
+      s2.options[i+1] = new Option(Grupos[i], i);
+    }
+</script>
 <script>
     $(document).ready(function(){
        $('.carousel.carousel-slider').carousel({fullWidth: true});
        $(".button-collapse").sideNav();
        $('ul.tabs').tabs();
+       $('select').material_select();
     });
 </script>
 </html>
