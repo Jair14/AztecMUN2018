@@ -7,8 +7,18 @@ function insertar(){
   var mail = document.getElementById('mail').value;
   var numero = document.getElementById('numero').value;
   var dataen = "nombre="+nombre+"&matricula="+matricula+"&grupo="+grupo+"&comite="+comite+"&pais="+pais+"&mail="+mail+"&numero="+numero;
-
-  $.ajax({
+  var validacion = true;
+  var respuesta = "";
+  if (nombre == "" || nombre == null) {
+    validacion = false;
+    respuesta += "Ingrese su nombre<br>";
+  }
+  if (matricula == "" || matricula == null || matricula == " ") {
+    validacion = false;
+    respuesta += "Ingrese su matricula<br>";
+  }
+  if (validacion) {
+    $.ajax({
     type: 'post',
     url: 'data.php',
     data: dataen,
@@ -17,6 +27,8 @@ function insertar(){
       $("#respuesta").html(respond);
     }
   });
-
+  }else{
+    $("#validacion").html(respuesta);
+  }
   return false;
 }

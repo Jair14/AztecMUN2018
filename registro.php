@@ -76,15 +76,18 @@
                   <div id="test1">
                     <div class="container">
                       <div class="input-field">
-                        <input type="text" name="nombre" id="nombre" required>
+                        <i class="material-icons prefix">account_circle</i>
+                        <input type="text" name="nombre" id="nombre" value="">
                         <label for="nombre">Nombre completo</label>
                       </div>
                       <div class="input-field">
+                        <i class="material-icons prefix">assignment_turned_in</i>
                         <input type="number" name="matricula" id="matricula">
                         <label for="matricula">Matricula</label>
                       </div>
                       <div class="input-field">
-                        <select name="sel2" id="sel2" required>
+                        <i class="material-icons prefix">group</i>
+                        <select name="sel2" id="sel2" >
                           <option value="" disabled selected>Selecciona tú grupo</option>
                         </select>
                         <label>Grupos</label>
@@ -95,7 +98,8 @@
                   <div id="test2">
                     <div class="container">
                       <div class="input-field">
-                        <select name="comite" id="comite" required>
+                        <i class="material-icons prefix">account_balance</i>
+                        <select name="comite" id="comite" >
                           <option value="" disabled selected>Selecciona un comité</option>
                           <option value="OTAN">OTAN</option>
                           <option value="CIJ">CIJ</option>
@@ -104,7 +108,8 @@
                         <label>Comités</label>
                       </div>
                       <div class="input-field">
-                        <select name="sel1" id="sel1" required>
+                        <i class="material-icons prefix">group_add</i>
+                        <select name="sel1" id="sel1" >
                           <option value="" disabled selected>Selecciona un país</option>
                         </select>
                         <label>Paises</label>
@@ -116,11 +121,13 @@
                   <div id="test4">
                     <div class="container">
                       <div class="input-field">
-                        <input type="email" name="mail" id="mail" required>
+                        <i class="material-icons prefix">email</i>
+                        <input type="email" name="mail" id="mail" >
                         <label for="mail">Ingrese su correo electrónico</label>
                       </div>
                       <div class="input-field">
-                        <input type="number" name="numero" id="numero" required>
+                        <i class="material-icons prefix">phone</i>
+                        <input type="number" name="numero" id="numero" >
                         <label for="numero">Ingrese un número de contacto</label>
                       </div>
                       <div class="center">
@@ -130,7 +137,7 @@
                       </div>
                       <br>
                       <div class="center">
-                        <b><p id="respond" class="center flow-text"></p></b>
+                        <b><p id="validacion" class="center"></p></b>
                       </div>
                       <br>
                     </div>
@@ -147,12 +154,12 @@
 Paises = ["México", "Canadá", "Japón", "Australia", "China", "Estados Unidos", "Perú", "España", "Alemania"];
 var s = document.getElementById('sel1');
   for (var i = 0; i < Paises.length ; i++) {
-    s.options[i+1] = new Option(Paises[i], i);
+    s.options[i+1] = new Option(Paises[i], Paises[i]);
   }
   Grupos = [611, 612, 613, 411, 412, 413, 211, 212, 213];
   var s2 = document.getElementById('sel2');
-    for (var i = 0; i < Paises.length ; i++) {
-      s2.options[i+1] = new Option(Grupos[i], i);
+    for (var i = 0; i < Grupos.length ; i++) {
+      s2.options[i+1] = new Option(Grupos[i], Grupos[i]);
     }
 </script>
 <script>
