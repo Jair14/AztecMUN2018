@@ -18,6 +18,3 @@ _Las tecnologias usadas para construir la aplicación fueron:_
 
 * **Allan Jair Escamilla Hernández** - *Frontend y backend* - [jairescamilla](https://github.com/jairescamilla)
 
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
