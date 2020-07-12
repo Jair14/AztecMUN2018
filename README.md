@@ -16,7 +16,7 @@ _Las tecnologias usadas para construir la aplicación fueron:_
 ## Autor ✒️
 
 
-* **Allan Jair Escamilla Hernández** - *Frontend y backend* - [villanuevand](https://github.com/villanuevand)
+* **Allan Jair Escamilla Hernández** - *Frontend y backend* - [jairescamilla](https://github.com/jairescamilla)
 
 ## Licencia 📄
 
